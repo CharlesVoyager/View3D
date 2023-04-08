@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View3D", "View3D.csproj", "{F4A6FB89-C8BC-4569-9A4E-A7D6910FBDC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4A6FB89-C8BC-4569-9A4E-A7D6910FBDC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A6FB89-C8BC-4569-9A4E-A7D6910FBDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A6FB89-C8BC-4569-9A4E-A7D6910FBDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A6FB89-C8BC-4569-9A4E-A7D6910FBDC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {410D7C0E-5FAC-4C5E-A41D-112507236CD4}
+	EndGlobalSection
+EndGlobal
