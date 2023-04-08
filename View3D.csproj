@@ -35,8 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenTK, Version=3.3.3.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>packages\OpenTK.3.3.3\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.3.3.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>packages\OpenTK.GLControl.3.3.3\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -141,7 +148,9 @@
     </Compile>
     <Compile Include="view\utils\RayCasting.cs" />
     <Compile Include="view\utils\RegMemory.cs" />
-    <Compile Include="view\utils\RHOpenGL.cs" />
+    <Compile Include="view\utils\RHOpenGL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="view\wpf\BusyWindow.xaml.cs">
       <DependentUpon>BusyWindow.xaml</DependentUpon>
     </Compile>
@@ -182,18 +191,12 @@
     <Compile Include="MeshIOLib\MeshInOut\IMeshInOutSetting.cs" />
     <Compile Include="MeshIOLib\MeshInOut\MeshIOBase.cs" />
     <Compile Include="MeshIOLib\MeshInOut\Stl\MeshIOStl.cs" />
-    <Compile Include="model\BasicConfiguration.cs" />
-    <Compile Include="model\BeltCalculator.cs" />
     <Compile Include="model\Commands.cs" />
-    <Compile Include="model\Coordinate.cs" />
-    <Compile Include="model\CubeMatrix.IEnumerator.cs" />
     <Compile Include="model\GCode.cs" />
     <Compile Include="model\GCodeAnalyzer.cs" />
     <Compile Include="model\GCodeGenerator.cs" />
-    <Compile Include="model\GCodeShort.cs" />
     <Compile Include="model\GCodeVisual.cs" />
     <Compile Include="model\Geom3D.cs" />
-    <Compile Include="model\IniManager.cs" />
     <Compile Include="model\ModelData.cs" />
     <Compile Include="model\ModelGLDraw.cs" />
     <Compile Include="model\PrinterModel.cs" />
@@ -238,6 +241,8 @@
     <EmbeddedResource Include="view\utils\ColorSlider.resx">
       <DependentUpon>ColorSlider.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
