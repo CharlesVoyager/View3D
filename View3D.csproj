@@ -28,13 +28,16 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="OpenTK, Version=3.3.3.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
       <HintPath>packages\OpenTK.3.3.3\lib\net20\OpenTK.dll</HintPath>
     </Reference>
@@ -108,6 +111,7 @@
     <Compile Include="ModelLib\Raycasting\RaycastType.cs" />
     <Compile Include="ModelLib\SWSetting.cs" />
     <Compile Include="ModelLib\Utils\RamTools.cs" />
+    <Compile Include="model\GCodeShort.cs" />
     <Compile Include="view\FormPrinterSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,7 +198,6 @@
     <Compile Include="model\Commands.cs" />
     <Compile Include="model\GCode.cs" />
     <Compile Include="model\GCodeAnalyzer.cs" />
-    <Compile Include="model\GCodeGenerator.cs" />
     <Compile Include="model\GCodeVisual.cs" />
     <Compile Include="model\Geom3D.cs" />
     <Compile Include="model\ModelData.cs" />
