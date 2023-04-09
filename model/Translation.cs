@@ -90,7 +90,6 @@ namespace View3D.model
             if (active == null)  // lastLanguage is not support
             { active = english; }
 
-
             Trans.trans = this;
         }
 
