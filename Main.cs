@@ -164,7 +164,7 @@ namespace View3D
 
             main = this;
 
-            trans = new Trans(Application.StartupPath + Path.DirectorySeparatorChar + "data" + Path.DirectorySeparatorChar + "translations");
+            trans = new Trans(Application.StartupPath + Path.DirectorySeparatorChar + "data");
             printerSettings = new FormPrinterSettings();
             printerModel = new PrinterModel();
             threeDSettings = new ThreeDSettings();
