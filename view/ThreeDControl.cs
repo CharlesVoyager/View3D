@@ -939,25 +939,6 @@ namespace View3D.view
             SetupViewport();
         }
 
-        private Matrix4 GluPickMatrix(float x, float y, float width, float height, int[] viewport)
-        {
-            Matrix4 result = Matrix4.Identity;
-            if ((width <= 0.0f) || (height <= 0.0f))
-            {
-                return result;
-            }
-
-            float translateX = (viewport[2] - (2.0f * (x - viewport[0]))) / width;
-            float translateY = (viewport[3] - (2.0f * (y - viewport[1]))) / height;
-            result = Matrix4.Mult(Matrix4.CreateTranslation(translateX, translateY, 0.0f), result);
-            float scaleX = viewport[2] / width;
-            float scaleY = viewport[3] / height;
-            //20170321 Nathan modify opengl function
-            result = Matrix4.Mult(Matrix4.CreateScale(scaleX, scaleY, 1.0f), result);
-            //result = Matrix4.Mult(Matrix4.Scale(scaleX, scaleY, 1.0f), result);
-            return result;
-        }
-
         public uint lastDepth = 0;
         public Geom3DLine pickLine = null; // Last pick up line ray
         public Geom3DLine viewLine = null; // Direction of view
@@ -1503,7 +1484,6 @@ namespace View3D.view
 
         private void newWorkspacetoolStripMenuItem_Click(object sender, EventArgs e)
         {
-
         }
 
         private void mminchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1548,7 +1528,6 @@ namespace View3D.view
                 tempConvexHullAry[i * 3 + 1] = ver.Y;
                 tempConvexHullAry[i * 3 + 2] = ver.Z;
             }
-
             model.convexHull3DVtx = tempConvexHullAry;
         }
     }
