@@ -71,6 +71,11 @@
     <Compile Include="Main.designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MeshIOLib\EnglishStreamWriter.cs" />
+    <Compile Include="MeshIOLib\IMeshInOut.cs" />
+    <Compile Include="MeshIOLib\IMeshInOutSetting.cs" />
+    <Compile Include="MeshIOLib\MeshIOBase.cs" />
+    <Compile Include="MeshIOLib\MeshIOStl.cs" />
     <Compile Include="ModelLib\Calculation\CalculateMath.cs" />
     <Compile Include="ModelLib\Extensions\Vector3Extensions.cs" />
     <Compile Include="ModelLib\ModelObjectTool\ModelObjectToolBase.cs" />
@@ -183,11 +188,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MeshIOLib\MeshInOut\EnglishStreamWriter.cs" />
-    <Compile Include="MeshIOLib\MeshInOut\IMeshInOut.cs" />
-    <Compile Include="MeshIOLib\MeshInOut\IMeshInOutSetting.cs" />
-    <Compile Include="MeshIOLib\MeshInOut\MeshIOBase.cs" />
-    <Compile Include="MeshIOLib\MeshInOut\Stl\MeshIOStl.cs" />
     <Compile Include="model\Commands.cs" />
     <Compile Include="model\GCode.cs" />
     <Compile Include="model\GCodeAnalyzer.cs" />
